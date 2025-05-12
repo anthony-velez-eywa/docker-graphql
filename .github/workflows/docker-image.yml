@@ -32,8 +32,10 @@ jobs:
     - name: Build the Docker image
       run: |
         docker build  --build-arg APP_VERSION=0.0.2 -t $DOCKER_USER/$DOCKER_CONTAINER_NAME:0.0.2 .
+        docker build  --build-arg APP_VERSION=0.0.2 -t $DOCKER_USER/$DOCKER_CONTAINER_NAME:latest .
         
     - name: Push Docker Image
       run: |
         docker push $DOCKER_USER/$DOCKER_CONTAINER_NAME:0.0.2
+        docker push $DOCKER_USER/$DOCKER_CONTAINER_NAME:latest
      # run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
