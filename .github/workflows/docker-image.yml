@@ -31,9 +31,9 @@ jobs:
         
     - name: Build the Docker image
       run: |
-        docker build -t $DOCKER_USER/$DOCKER_CONTAINER_NAME:l:0.0.2 .
+        docker build -t $DOCKER_USER/$DOCKER_CONTAINER_NAME:0.0.2 .
         
     - name: Push Docker Image
       run: |
-        docker push $DOCKER_USER/$DOCKER_CONTAINER_NAME:l:0.0.2 .
+        docker push $DOCKER_USER/$DOCKER_CONTAINER_NAME:0.0.2 .
      # run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
